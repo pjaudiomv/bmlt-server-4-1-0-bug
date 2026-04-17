@@ -294,7 +294,12 @@ In this out-of-tree archive:
 
 - `README.md` — short, human-readable
 - `CONTEXT.md` — this file
-- `RestoreFormatsFromDijon.php` — copy of the command
+- `RestoreFormatsFromDijon.php` — copy of the artisan command
+- `generate-recovery-sql.py` — standalone SQL generator for admins without
+  shell/artisan access (shared hosting). Reads from Dijon + the admin's
+  public `/client_interface/json` endpoints; writes a .sql file of UPDATE
+  statements. Published meetings only; unpublished would need the artisan
+  command. Limitations documented in the file header.
 - `assess-format-damage.py` — the Dijon sweep tool
 - `CleanOrphanedFormatIdsMigrationTest.php` — copy of the regression test
 
